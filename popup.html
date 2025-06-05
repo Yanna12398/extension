@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Volume Control</title>
+  <style>
+    body {
+      width: 200px;
+      font-family: sans-serif;
+      padding: 10px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <label for="volume">Volume (100–600):</label>
+  <input type="range" id="volume" min="100" max="600" value="600">
+  <span id="volumeValue">600</span>
+  <script src="volume.js"></script>
+</body>
+</html>
